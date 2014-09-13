@@ -3,16 +3,13 @@ import numpy as np #get numpy
 from sympy import Symbol,pi,sqrt #import required symbolic math components
 
 # initialize symbols
-x    = Symbol('x')
-y    = Symbol('y')
-dx   = Symbol('dx')
-dy   = Symbol('dy')
+from sympy.abc import x, y
 
 # function to calculate error of
 f    = sqrt(4*pi**2/x+y**4)
 
 # get the error function
-func =  er.getError([x,y],[dx,dy],f)
+func =  er.getError([x,y],f,showFunc = True)
 
 # measured values of variables and there errors
 x    = np.array([.0404,.05])
