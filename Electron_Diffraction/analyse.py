@@ -45,30 +45,47 @@ def DeBroglie(v,m = Me):
 	waveLen = h/p*c # correct for wierd units with a factor of c
 	return(waveLen*10**6) #converts to nm
 
-def DeBroglieErr(v,dv,m = Me):
-	from sympy.abc import v # initialize symbols
-	waveLen    = h/(sqrt(2*m)*np.sqrt(v)*c)
+def DeBroglieErr(voltage,voltageErr,m = Me):
+	v = Symbol("v",positive = True) # initialize symbols
+	h = Symbol("h",positive = True)
+	c = Symbol("c",positive = True)
+	m = Symbol("m",positive = True)
+	from sympy import sqrt # initialize symbols
+	waveLen    = h/(sqrt(2*m*v)*c)
 
 	# get the error function
-	func =  er.getError([x,y],f,showFunc = True)
-
-	# measured values of variables and there errors
-	x    = np.array([.0404,.05])
-	dx   = np.array([.00031,.0004])
-	y = np.array([1,2])
-	dy = np.array([.1,.01])
+	func =  er.getRelError([v],waveLen)
 
 	# calculate error for each point
-	error = func(x,y,dx,dy)
+	error = func(voltage,voltageErr)
 
-	print error
+	return error
+
+def BraggErr(Diam,DiamErr,d,L = L,r = r):
+	v = Symbol("v",positive = True) # initialize symbols
+	D = Symbol("D",positive = True)
+
+	from sympy import sqrt,atan,sin,pprint # initialize symbols
+	a = sqrt(r**2-D**2/4)
+	x = (L/(L-(r-a))) #based on geometric calculations that can bee seen in my lab notebook
+	DCorrected = D+2*x
+	theta = DCorrected/(2*L)/2
+	waveLen = 2*d*theta
+	
+	# get the error function
+	func =  er.getRelError([D],waveLen)
+
+	# calculate error for each point
+	error = func(voltage,voltageErr)
+
+	return error
 
 
 # ------------ generating the plots --------------
 
-def plotWaveLengths(v,D,d,DeBrogErr,BraggErr,title):
-	plt.errorbar(v,DeBroglie(v),xerr = .02,yerr = DeBrogErr,fmt = 'b.', label = 'DeBroglie')
-	plt.errorbar(v, Bragg(D,d),xerr = .02,yerr = BraggErr,fmt = 'r.',label = 'Bragg')
+def plotWaveLengths(v,verr,D,d,title):
+	plt.errorbar(v,DeBroglie(v),xerr = .02,yerr = DeBroglieErr(voltage,verr)*DeBroglie(v),fmt = 'b.', label = 'DeBroglie')
+	plt.errorbar(v, Bragg(D,d),xerr = .02,yerr = BraggErr(smallInner,smallErr,d)*Bragg(D,d),fmt = 'r.',label = 'Bragg')
 	plt.ylabel("wave length (nm)")
 	plt.xlabel("Accelerating potential (Kv)")
 	plt.title("Electron wavelengths, DeBroglie VS Bragg \n "+title)
@@ -76,9 +93,8 @@ def plotWaveLengths(v,D,d,DeBrogErr,BraggErr,title):
 	plt.savefig(title+'.pdf')
 	plt.close("all")
 
-
 #Dont forget to calculate error in wave lengths (this require propogation of error, and its 1:45, i can't seem to figure it out.
-plotWaveLengths(voltage,smallInner,d10,0,0,'Small_Ring_Inner_Diameter')
-plotWaveLengths(voltage,smallMiddle,d10,0,0,'Small_Ring_Middle_Diameter')
-plotWaveLengths(voltage,smallInner,d11,0,0,'Larg_Ring_Inner_Diameter')
-plotWaveLengths(voltage,smallMiddle,d11,0,0,'Large_Ring_Middle_Diameter')
+plotWaveLengths(voltage,voltageErr,smallInner,d10,'Small_Ring_Inner_Diameter')
+plotWaveLengths(voltage,voltageErr,smallMiddle,d10,'Small_Ring_Middle_Diameter')
+plotWaveLengths(voltage,voltageErr,smallInner,d11,'Larg_Ring_Inner_Diameter')
+plotWaveLengths(voltage,voltageErr,smallMiddle,d11,'Large_Ring_Middle_Diameter')
