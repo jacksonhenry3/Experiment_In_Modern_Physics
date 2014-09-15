@@ -24,6 +24,5 @@ def getRelError(variables,func,showFunc = False):
 		pprint(ErrorFunc)
 		
 	variables.extend(erVars.values()) #create a list of all sympy symbols involved
-	ErrorFunc = sqrt(ErrorFunc) #this is the final formula for error
 	func      = lambdify(tuple(variables), ErrorFunc ,"numpy") #convert ErrorFunc to a numpy rteady python lambda
 	return(func)
