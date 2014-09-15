@@ -94,7 +94,7 @@ def plotWaveLengths(v,verr,D,d,title):
 	data = np.append(data,a,1)
 	header+= '|Bragg'+str(d)+'|Bragg'+str(d)+'err'
 	plt.ylabel("wave length (nm)")
-	plt.xlabel("Accelerating potential (Kv)")
+	plt.xlabel("Accelerating potential (kV)")
 	plt.title("Electron wavelengths, DeBroglie VS Bragg \n "+title)
 	plt.legend(bbox_to_anchor=(.7, .95), loc=2, borderaxespad=0.)
 	plt.savefig(title+'.pdf')
