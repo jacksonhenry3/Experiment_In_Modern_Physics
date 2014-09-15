@@ -69,7 +69,7 @@ def BraggErr(Diam,DiamErr,d,L = L,r = r):
 
 	from sympy import sqrt,atan,sin,pprint # initialize symbols
 	a       = sqrt(r**2-D**2/4)
-	x       = (L/(L-(r-a))) #based on geometric calculations that can bee seen in my lab notebook
+	x       = (L/(L-(r-a))-1)*D/2 #based on geometric calculations that can bee seen in my lab notebook
 	DCorect = D+2*x
 	theta   = DCorect/(2*L)/2
 	waveLen = 2*d*theta
