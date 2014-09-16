@@ -102,8 +102,8 @@ def plotWaveLengths(v,verr,D,d,title):
 
 plotWaveLengths(voltage,voltageErr,smallInner,d10,'Small_Ring_Inner_Diameter')
 plotWaveLengths(voltage,voltageErr,smallMiddle,d10,'Small_Ring_Middle_Diameter')
-plotWaveLengths(voltage,voltageErr,smallInner,d11,'Larg_Ring_Inner_Diameter')
-plotWaveLengths(voltage,voltageErr,smallMiddle,d11,'Large_Ring_Middle_Diameter')
+plotWaveLengths(voltage,voltageErr,largeInner,d11,'Larg_Ring_Inner_Diameter')
+plotWaveLengths(voltage,voltageErr,largeMiddle,d11,'Large_Ring_Middle_Diameter')
 
 # calculate the average percent difference between debroglie and bragg WL
 avDif = np.abs(1-Bragg(smallInner,d10)/DeBroglie(voltage))
@@ -126,5 +126,5 @@ a      =  np.expand_dims(avDif,axis = 1)
 data   = np.append(data,a,1)
 header +='|av % diff'
 
-np.savetxt('dataWithCalculatedCols.txt',  np.transpose(data),newline = '\n \n', delimiter  = '  ', fmt = '%.2e'    )
+np.savetxt('dataWithCalculatedCols.txt',  data,newline = '\n', delimiter  = '  ', fmt = '%.2e'    )
 print header
