@@ -17,7 +17,7 @@ voltageErr[-2] = 5
 voltageErr[-3] = 5
 voltageErr[-4] = 5
 
-currentError = np.ones(len(current))*.5
+currentError = np.ones(len(current))*.05
 rootVByI = np.sqrt(voltage)/current
 rootVByIErr = np.sqrt(voltageErr**2/(4*current**2*voltage)+voltage*currentError**2/(current**4))
 
