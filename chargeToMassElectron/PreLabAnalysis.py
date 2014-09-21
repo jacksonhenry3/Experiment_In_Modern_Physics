@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # ----------- raw data and raw error ---------
 currentData  = np.loadtxt('CalibrationDataCurrentVField.txt',skiprows = 1)
-Current      = currentData[:,0]
+Current      = currentData[:,0] #Amperes
 Field1       = currentData[:,1]/10 #in mili tesla
 
 positiondata = np.loadtxt('CallibrationDataPositionVField.txt',skiprows = 1)
@@ -18,6 +18,7 @@ plt.plot(Current,v[0]*Current+v[1])
 plt.title("Magnetic field VS Current")
 plt.xlabel("Current (A)")
 plt.ylabel("Magnetic Field (mT)")
+plt.text(3,0,"slope of .78")
 plt.savefig('CurrentVField.pdf')
 plt.close("all")
 
