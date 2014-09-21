@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.insert(0, '../../')
 
-import error as er #get the error library
-from sympy import Symbol,sqrt #import required symbolic math components
-
 data  = np.loadtxt('data.txt',skiprows = 1)
 voltage = data[:,0]
 current= data[:,1]

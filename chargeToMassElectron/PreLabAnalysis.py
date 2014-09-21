@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # ----------- raw data and raw error ---------
 currentData  = np.loadtxt('CalibrationDataCurrentVField.txt',skiprows = 1)
 Current      = currentData[:,0]
-Field1       = currentData[:,1]
+Field1       = currentData[:,1]/10 #in mili tesla
 
 positiondata = np.loadtxt('CallibrationDataPositionVField.txt',skiprows = 1)
 Position     = positiondata[:,0]
@@ -13,11 +13,11 @@ Field2       = positiondata[:,1]
 # calculate best fit line
 v =  np.polyfit(Current,Field1,1)
 print v[0]
-plt.errorbar(Current,Field1,fmt = 'r.',xerr = .01, yerr = currentData[:,2])
+plt.errorbar(Current,Field1,fmt = 'r.',xerr = .01, yerr = currentData[:,2]/10)
 plt.plot(Current,v[0]*Current+v[1])
 plt.title("Magnetic field VS Current")
 plt.xlabel("Current (A)")
-plt.ylabel("Magnetic Field (Gaus)")
+plt.ylabel("Magnetic Field (mT)")
 plt.savefig('CurrentVField.pdf')
 plt.close("all")
 
