@@ -1,31 +1,33 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-data = np.transpose(np.loadtxt("prelabData.txt",skiprows = 2)) #get the data and put it in apropriat columns
+data = np.sort(np.transpose(np.loadtxt("prelabData.txt",skiprows = 2)),axis = 1) #get the data and put it in apropriat columns
 voltage = data[0]
 current = data[1]
 
-#taking a numerical derivative 
+#function to take a numerical derivative via finite difference method
 def num_div(vals,dists):
-	div = []
-	for i in range(len(vals)-1):
-		a = (vals[i+1]-vals[i])/(dists[i+1]-dists[i])
+	div = [] #will contain succesive differences in points
+	for i in range(len(vals)-1):#loop over 
+		a = (vals[i+1]-vals[i])/(dists[i+1]-dists[i]) #the difference in values over the difference in distances
 		div.append(a)  #add the discrete difference bettwen two succesive points
 	return(div)
 
 
-def get_tangents(vals,dists):
-	vals = np.sort(vals) #sort all the values
-	dists = np.sort(dists)
-	neg = -100 #start at arbitrary values and find the value closest to zero that is either negative or positive
+def get_tangents(vals,dists): #gets aproximate tangant line by crude linear aproximation
+	""" gets two tangents of two section of data. The first one is the line through the first point and 
+	the point closest to zero that is still negative while the second line is the line through the last data point and
+	the smallest positive value.
+	"""
+	neg = -100 #start at arbitrary values and iterate to find the value closest to zero that is either negative or positive
 	pos = 100 
-	for v in range(len(vals)):
-		if vals[v]<=0 and vals[v]>neg:
-			neg = vals[v] 
-			negi = v
-		if vals[v]>=0 and vals[v]<pos:
-			pos = vals[v]
-			posi = v
+	for i in range(len(vals)): #iterate over all vals and dists
+		if vals[i]<=0 and vals[i]>neg:
+			neg = vals[i] 
+			negi = i
+		if vals[i]>=0 and vals[i]<pos:
+			pos = vals[i]
+			posi = i
 
 	tangent1_Slope = (neg-vals[0])/(dists[negi]-dists[0])
 	tangent2_Slope = (pos-vals[-1])/(dists[posi]-dists[-1])
