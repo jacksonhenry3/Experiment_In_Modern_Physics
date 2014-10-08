@@ -20,6 +20,6 @@ header = "frequency (kHz)	Channel 1 (V)	Channel2 (V)	Channel 1 error (V)		channe
 np.savetxt('dataCalc.txt',calculated_Data_columns,newline = '\n', delimiter  = '	', fmt = '%.2e'  ,header = header)
 
 #set up for a log log plot
-plt.subplot(111, xscale="log", yscale="log") 
+plt.subplot(111, xscale="log", yscale="log")
 plt.errorbar(freq, gain, yerr=rel_gain_err*gain,fmt = 'r--')  
 plt.show() 

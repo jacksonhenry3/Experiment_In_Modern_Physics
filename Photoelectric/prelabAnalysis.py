@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 data = np.sort(np.transpose(np.loadtxt("prelabData.txt",skiprows = 2)),axis = 1) #get the data and put it in apropriat columns
+data = np.sort(np.transpose(np.loadtxt("yellow.txt")),axis = 1) #get the data and put it in apropriat columns
 voltage = data[0]
 current = data[1]
 
@@ -32,9 +33,12 @@ def get_tangents(vals,dists): #gets aproximate tangant line by crude linear apro
 	tangent1_Slope = (neg-vals[0])/(dists[negi]-dists[0])
 	tangent2_Slope = (pos-vals[-1])/(dists[posi]-dists[-1])
 
-	b = vals[posi]-tangent2_Slope*dists[posi]
 
-	return ([tangent1_Slope,vals[0]],[tangent2_Slope,b])
+
+	b2 = vals[posi]-tangent2_Slope*dists[posi]
+	b1 = vals[negi]-tangent1_Slope*dists[negi]
+	x = (b1-b2)/(tangent2_Slope-tangent1_Slope)
+	return ([tangent1_Slope,b1],[tangent2_Slope,b2],x)
 
 
 
@@ -42,11 +46,10 @@ def get_tangents(vals,dists): #gets aproximate tangant line by crude linear apro
 
 currentediv = num_div(current,voltage)
 
-tan1 =  get_tangents(current,voltage)[0]
-tan2 =  get_tangents(current,voltage)[1]
+[tan1,tan2,x] =  get_tangents(current,voltage)
 
 x = (tan2[1]-tan1[1])/(tan1[0]-tan2[0])
-
+print x
 
 plt.plot(voltage,tan1[0]*voltage+tan1[1])
 plt.plot(voltage,tan2[0]*voltage+tan2[1])
