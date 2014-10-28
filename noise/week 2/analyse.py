@@ -1,12 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-data = np.transpose(np.loadtxt('noiseWeek2Data',skiprows = 1))
-
-newCol = data[2]*10000/((600*data[1])**2)/(1000)**2
-
-plt.loglog(data[0],newCol)
-plt.xlabel("log source resistance")
-plt.ylabel("log <Vj^2+Vn^2>")
-plt.title("Total system noise")
+import scipy.optimize as op
+data = np.transpose(np.loadtxt('dataForGnu.txt',skiprows = 1))
+x = np.linspace(.001,1000,10000)
+for i in range(-3,3):
+	s = 2*10**(-13)
+	plt.plot(x,s*x**(1+i/10.))
+plt.plot(data[0],data[1])
 plt.show()
-print newCol

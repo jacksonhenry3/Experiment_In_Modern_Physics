@@ -1,7 +1,6 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-# data = np.sort(np.transpose(np.loadtxt("prelabData.txt",skiprows = 2)),axis = 1) #get the data and put it in apropriat columns
 data = np.sort(np.transpose(np.loadtxt("violet.txt")),axis = 1) #get the data and put it in apropriat columns
 voltage = np.sort(data[0])
 current = data[1]
