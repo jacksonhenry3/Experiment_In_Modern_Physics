@@ -1,8 +1,9 @@
 import numpy as np
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+data = np.transpose(np.loadtxt('millikandata',skiprows = 3))
 
 
-def q(dg,de,tg,te,V = 500):
+def q(dg,de,tg,te,V = 530):
 	m = 2.04
 	ve = de/te/m
 	vg = dg/tg/m
@@ -17,5 +18,10 @@ def q(dg,de,tg,te,V = 500):
 	q = q/(np.sqrt((1+A/r)**3))
 	return q
 
-a = q(.001,.001,15.92,6.82)
-print a/(1.60217657*10**(-19))
+a = q(.001,.001,data[1],data[0])/(1.60217657*10**(-19))
+
+print a
+binwidth = 1/4.
+
+plt.hist(a,bins=np.arange(min(a), max(a) + binwidth, binwidth))
+plt.show()
