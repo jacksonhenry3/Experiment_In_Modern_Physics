@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-data = np.transpose(np.loadtxt('millikandata',skiprows = 3))
 
+data = np.transpose(np.loadtxt('millikandata',skiprows = 3))
 
 def q(dg,de,tg,te,V = 530):
 	m = 2.04
@@ -18,10 +18,13 @@ def q(dg,de,tg,te,V = 530):
 	q = q/(np.sqrt((1+A/r)**3))
 	return q
 
-a = q(.001,.001,data[1],data[0])/(1.60217657*10**(-19))
+ne = q(.001,.001,data[1],data[0])/(1.60217657*10**(-19))
 
-print a
-binwidth = 1/4.
+binwidth = 1/10.
 
-plt.hist(a,bins=np.arange(min(a), max(a) + binwidth, binwidth))
+plt.hist(ne,bins=np.arange(min(ne), max(ne) + binwidth, binwidth))
+plt.xticks(range(14))
+plt.xlabel('q/e')
+plt.ylabel('Number of droplets')
+plt.title('Histogram of Droplet Charges')
 plt.show()

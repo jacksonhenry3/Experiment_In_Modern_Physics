@@ -42,6 +42,7 @@ plt.savefig('varying_d.png')
 plt.close()
 
 for WL in range(550,670,50):
+	print WL
 	normI = normalised_intensity(angle,a,d,WL)
 	plt.plot(angle,normI)
 
