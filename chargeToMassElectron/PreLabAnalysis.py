@@ -19,7 +19,7 @@ plt.title("Magnetic field VS Current")
 plt.xlabel("Current (A)")
 plt.ylabel("Magnetic Field (mT)")
 plt.text(2.5,0,"slope of .78")
-plt.savefig('CurrentVField.pdf')
+plt.savefig('CurrentVField.eps')
 plt.close("all")
 
 
