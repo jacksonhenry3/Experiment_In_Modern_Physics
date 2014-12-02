@@ -26,7 +26,7 @@ position = np.degrees((DSLaser[0]-4.875)/500)
 intensity = (DSLaser[1]-36)/(np.max(DSLaser[1]))
 plt.plot(position,intensity, 'b.')
 
-plt.xlabel('angle')
+plt.xlabel('angle (degrees)')
 plt.ylabel('Normalized Intensity')
 plt.title('Double Slit Laser')
 
