@@ -21,10 +21,10 @@ d = .041
 
 s = normalised_intensity(angle,a,d,670)
 
-guess_plot, = plt.plot(angle,s, lw=2, color='red')
+guess_plot, = plt.plot(angle,s,'r')
 position  = np.arctan((DSLaser[0]-DSLaser[0][maxIndex(DSLaser[1])])/50)
 intensity = (DSLaser[1]-36)/(np.max(DSLaser[1]))
-plt.plot(position,intensity, lw=2, color='blue')
+plt.plot(position,intensity, 'b.')
 
 plt.xlabel('angle')
 plt.ylabel('Normalized Intensity')
