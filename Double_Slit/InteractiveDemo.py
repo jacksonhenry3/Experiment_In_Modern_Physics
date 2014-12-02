@@ -13,7 +13,7 @@ def maxIndex(a):
 	for i in range(len(a)):
 		if a[i] == max(a):
 			return(i)
-angle = np.arange(-.08,.08,.00001)
+angle = np.arange(-.5,.5,.00001)
 
 a = .0093
 d = .041
@@ -22,7 +22,7 @@ d = .041
 s = normalised_intensity(angle,a,d,670)
 
 guess_plot, = plt.plot(angle,s,'r')
-position  = np.arctan((DSLaser[0]-DSLaser[0][maxIndex(DSLaser[1])])/50)
+position = np.degrees((DSLaser[0]-4.875)/500)
 intensity = (DSLaser[1]-36)/(np.max(DSLaser[1]))
 plt.plot(position,intensity, 'b.')
 
@@ -35,11 +35,11 @@ plt.title('Double Slit Laser')
 AsPosition = plt.axes([0.25, 0.1, 0.65, 0.03])
 DsPosition  = plt.axes([0.25, 0.15, 0.65, 0.03])
 
-a = .01
-d = .04
+a = .001
+d = .001
 
-As = Slider(AsPosition, 'a', 0, .03, valinit=a)
-Ds = Slider(DsPosition, 'd', 0, .1, valinit=d)
+As = Slider(AsPosition, 'a', 0, .002, valinit=a,valfmt=u'%1.5f')
+Ds = Slider(DsPosition, 'd', 0, .01, valinit=d,valfmt=u'%1.5f')
 
 def update(val):
     guess_plot.set_ydata(normalised_intensity(angle,As.val,Ds.val,670))
