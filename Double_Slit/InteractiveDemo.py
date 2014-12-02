@@ -35,11 +35,11 @@ plt.title('Double Slit Laser')
 AsPosition = plt.axes([0.25, 0.1, 0.65, 0.03])
 DsPosition  = plt.axes([0.25, 0.15, 0.65, 0.03])
 
-a = .001
-d = .001
+a = .085
+d = .35
 
-As = Slider(AsPosition, 'a', 0, .002, valinit=a,valfmt=u'%1.5f')
-Ds = Slider(DsPosition, 'd', 0, .01, valinit=d,valfmt=u'%1.5f')
+As = Slider(AsPosition, 'a', 0, .15, valinit=a,valfmt=u'%1.5f')
+Ds = Slider(DsPosition, 'd', 0, .5, valinit=d,valfmt=u'%1.5f')
 
 def update(val):
     guess_plot.set_ydata(normalised_intensity(angle,As.val,Ds.val,670))
