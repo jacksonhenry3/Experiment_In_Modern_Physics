@@ -1,4 +1,4 @@
-Intensity	Voltage (mv)	Voltage err (mv)	current (A)
+#Intensity	Voltage (mv)	Voltage err (mv)	current (A)
 30	7.266	0.005	0.94
 35	10.974	0.005	1.04
 40	11.777	0.005	1.11
