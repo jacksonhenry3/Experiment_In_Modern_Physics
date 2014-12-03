@@ -1,4 +1,4 @@
-Bias (v) 	Dark count 	Light Count
+#Bias (v) 	Dark count 	Light Count
 300	0	0
 325	0	0
 350	0	0
