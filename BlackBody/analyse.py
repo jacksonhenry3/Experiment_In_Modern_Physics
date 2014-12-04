@@ -6,12 +6,8 @@ sigma = 5.67*(10**(-8))
 def normalize(l):
 	return(l/np.max(l))
 
-
-#NEEDS TO BE DISCUSSSEDSDESSDDS
 def getTemp(I,V):
-	alpha = 4.5*10**-3
-	return(1/alpha*(V/I)/4.5398-1+295) #calues are reasonable, but got alpha from internets.
-	return(((I*V)/sigma)**(1/4.)) #WHY DOESNT THIS WORK!!!!
+	return(((V/I)/4.5398)**(1/1.203)*295)
 
 def genCalcCols(dataFile):
 	data = np.transpose(np.loadtxt(dataFile,skiprows = 1))
@@ -32,20 +28,20 @@ def plotLogDetVinvT(dataFile,title):
 
 
 
-# genCalcCols('BlackBody600.data')
+genCalcCols('BlackBody600.data')
 plotLogDetVinvT('BlackBody600.data','600 nm')
 
-# genCalcCols('BlackBody800.data')
+genCalcCols('BlackBody800.data')
 plotLogDetVinvT('BlackBody800.data','800 nm')
 
-# genCalcCols('BlackBody1200.data')
+genCalcCols('BlackBody1200.data')
 plotLogDetVinvT('BlackBody1200.data','1200 nm')
 
-# genCalcCols('BlackBody1600.data')
+genCalcCols('BlackBody1600.data')
 plotLogDetVinvT('BlackBody1600.data','1600 nm')
 
-# genCalcCols('BlackBody2000.data')
+genCalcCols('BlackBody2000.data')
 plotLogDetVinvT('BlackBody2000.data','2000 nm')
 
-# genCalcCols('BlackBody2400.data')
+genCalcCols('BlackBody2400.data')
 plotLogDetVinvT('BlackBody2400.data','2400 nm')
