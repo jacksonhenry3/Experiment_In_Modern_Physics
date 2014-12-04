@@ -18,7 +18,7 @@ def wavelength(angle,order):
 
 theta1 = angle('Hydrogen.Data')
 H_wl   = wavelength(theta1,1)
-
+n = 
 coefs =  np.polyfit(1./np.arange(4,1,-1)**2,1/H_wl,1)
 print coefs[1]/4
 print -coefs[0]
