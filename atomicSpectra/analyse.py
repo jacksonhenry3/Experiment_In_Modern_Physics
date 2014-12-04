@@ -7,7 +7,7 @@ def angle(dataFile):
 	return angle
 
 def wavelength(angle,order):
-	d = 1600 #CHANGE THIS TO REFLECT ACTUAL VALUE OF DIFFRACTION GRATING USED  in nm
+	d = 1670 #CHANGE THIS TO REFLECT ACTUAL VALUE OF DIFFRACTION GRATING USED  in nm
 	return(d*np.sin(np.radians(angle))/order)
 
 # theta2 = angle('HelliumFirstOrder.Data')
@@ -18,9 +18,9 @@ def wavelength(angle,order):
 
 theta1 = angle('Hydrogen.Data')
 H_wl   = wavelength(theta1,1)
-n = 
-coefs =  np.polyfit(1./np.arange(4,1,-1)**2,1/H_wl,1)
+n = np.arange(4,1,-1)
+coefs =  np.polyfit(1./n**2,1/H_wl,1)
 print coefs[1]/4
 print -coefs[0]
-plt.plot(1./np.arange(4,1,-1)**2,1/H_wl,'o')
+plt.plot(1./n**2,1/H_wl,'o')
 plt.show()
