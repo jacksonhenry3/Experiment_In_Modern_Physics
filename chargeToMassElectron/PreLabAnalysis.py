@@ -18,7 +18,11 @@ plt.plot(Current,v[0]*Current+v[1])
 plt.title("Magnetic field VS Current at Center")
 plt.xlabel("Current (A)")
 plt.ylabel("Magnetic Field (mT)")
+<<<<<<< HEAD
 plt.text(2.5,0,"slope of .78 mT/A")
+=======
+plt.text(2.5,0,"slope of .78")
+>>>>>>> origin/master
 plt.savefig('CurrentVField.eps')
 plt.close("all")
 

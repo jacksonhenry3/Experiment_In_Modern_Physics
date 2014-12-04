@@ -126,5 +126,5 @@ a      =  np.expand_dims(avDif,axis = 1)
 data   = np.append(data,a,1)
 header +='|av % diff'
 
-np.savetxt('dataWithCalculatedCols.txt',  data,newline = '\n', delimiter  = '  ', fmt = '%.2e'    )
+np.savetxt('dataWithCalculatedCols.txt',  data,newline = '\n', delimiter  = '  ', fmt = '%.2e',header = header  )
 print header
