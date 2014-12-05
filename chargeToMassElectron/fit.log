@@ -1,0 +1,44 @@
+
+
+*******************************************************************************
+Thu Dec 04 21:13:48 2014
+
+
+FIT:    data read from 'CalibrationDataCurrentVField.txt' u 1:2:3
+        format = x:z:s
+        #datapoints = 11
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 56745.5           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 74.381
+
+initial set of free parameter values
+
+m               = 1
+b               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 2.61585
+rel. change during last iteration : -1.13604e-011
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.53912
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.29065
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.782166         +/- 0.002764     (0.3534%)
+b               = 0.00403159       +/- 0.004351     (107.9%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.749  1.000 
