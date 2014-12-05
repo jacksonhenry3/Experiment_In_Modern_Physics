@@ -573,3 +573,540 @@ correlation matrix of the fit parameters:
                a      n      
 a               1.000 
 n              -1.000  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 17:55:35 2014
+
+
+FIT:    data read from 'BlackBody600.data' u 6:7
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 63.8705           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.000413598
+
+initial set of free parameter values
+
+n               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 19.7294
+rel. change during last iteration : -3.87908e-009
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.18711
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.40924
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+n               = -4146.61         +/- 741.1        (17.87%)
+
+
+correlation matrix of the fit parameters:
+
+               n      
+n               1.000 
+
+
+*******************************************************************************
+Thu Dec 04 17:59:49 2014
+
+
+FIT:    data read from 'BlackBody600.data' u 6:7
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 124.893           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.707107
+
+initial set of free parameter values
+
+m               = 1
+b               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.0286324
+rel. change during last iteration : -5.62097e-006
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0469308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0022025
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -23338.2         +/- 205          (0.8785%)
+b               = 8.01989          +/- 0.0848       (1.057%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.990  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:09:44 2014
+
+
+FIT:    data read from 'BlackBody600.data' u 6:7:8
+        format = x:z:s
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6459.04           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 593.88
+
+initial set of free parameter values
+
+m               = -23338.2
+b               = 8.01989
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 6207.25
+rel. change during last iteration : -6.74107e-006
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 21.8513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 477.481
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -23338.2         +/- 202.1        (0.8658%)
+b               = 8.01503          +/- 0.1043       (1.301%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.998  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:28:02 2014
+
+
+FIT:    data read from 'BlackBody800.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000320000 : 0.000540000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1.15832e+006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 141.784
+
+initial set of free parameter values
+
+m               = -23338.2
+b               = 8.01503
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 613.687
+rel. change during last iteration : -2.06712e-006
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.87071
+variance of residuals (reduced chisquare) = WSSR/ndf   : 47.2067
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -16832.1         +/- 175          (1.04%)
+b               = 6.16334          +/- 0.08646      (1.403%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.995  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:36:49 2014
+
+
+FIT:    data read from 'BlackBody1200.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2482.28           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2.2614
+
+initial set of free parameter values
+
+m               = -16832.1
+b               = 6.16334
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.172982
+rel. change during last iteration : -3.05073e-007
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115353
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0133063
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -11718           +/- 147.4        (1.258%)
+b               = 7.86024          +/- 0.06731      (0.8564%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.990  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:48:11 2014
+
+
+FIT:    data read from 'BlackBody600.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8.59715e+007      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 426.362
+
+initial set of free parameter values
+
+m               = -11718
+b               = 7.86024
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5742.73
+rel. change during last iteration : -8.61391e-013
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 21.0178
+variance of residuals (reduced chisquare) = WSSR/ndf   : 441.749
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -23877.1         +/- 361.3        (1.513%)
+b               = 8.22854          +/- 0.1289       (1.566%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.998  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:53:55 2014
+
+
+FIT:    data read from 'BlackBody800.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.43579e+006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 683.594
+
+initial set of free parameter values
+
+m               = -23877.1
+b               = 8.22854
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 9617.66
+rel. change during last iteration : -5.35238e-014
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 27.1996
+variance of residuals (reduced chisquare) = WSSR/ndf   : 739.82
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -17868.4         +/- 235.8        (1.32%)
+b               = 6.59558          +/- 0.08521      (1.292%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.996  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 18:58:39 2014
+
+
+FIT:    data read from 'BlackBody1200.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.83673e+009      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 3477.96
+
+initial set of free parameter values
+
+m               = -17868.4
+b               = 6.59558
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 319376
+rel. change during last iteration : -3.80179e-006
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 156.74
+variance of residuals (reduced chisquare) = WSSR/ndf   : 24567.4
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -11858.5         +/- 181.4        (1.529%)
+b               = 7.94264          +/- 0.09045      (1.139%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.996  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 19:03:39 2014
+
+
+FIT:    data read from 'BlackBody1600.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.85528e+007      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 936.54
+
+initial set of free parameter values
+
+m               = -11858.5
+b               = 7.94264
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 8086
+rel. change during last iteration : -2.22057e-006
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 24.9399
+variance of residuals (reduced chisquare) = WSSR/ndf   : 622
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -8645.63         +/- 101          (1.169%)
+b               = 8.03486          +/- 0.03983      (0.4957%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.993  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 19:09:58 2014
+
+
+FIT:    data read from 'BlackBody1600.data' u 6:7:8
+        format = x:z:s
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.55377e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 936.54
+
+initial set of free parameter values
+
+m               = 1
+b               = 1
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 8086
+rel. change during last iteration : -9.22317e-015
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 24.9399
+variance of residuals (reduced chisquare) = WSSR/ndf   : 622
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -8645.63         +/- 101          (1.169%)
+b               = 8.03486          +/- 0.03983      (0.4957%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.993  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 19:14:27 2014
+
+
+FIT:    data read from 'BlackBody2000.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8.91335e+006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 124.13
+
+initial set of free parameter values
+
+m               = -8645.63
+b               = 8.03486
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 296.188
+rel. change during last iteration : -1.54501e-009
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.77322
+variance of residuals (reduced chisquare) = WSSR/ndf   : 22.7837
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -8749.71         +/- 154.4        (1.764%)
+b               = 3.68437          +/- 0.06068      (1.647%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.993  1.000 
+
+
+*******************************************************************************
+Thu Dec 04 19:18:41 2014
+
+
+FIT:    data read from 'BlackBody2400.data' u 6:7:8
+        format = x:z:s
+        x range restricted to [0.000300000 : 0.000600000]
+        #datapoints = 15
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 151903            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 73.6913
+
+initial set of free parameter values
+
+m               = -8749.71
+b               = 3.68437
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 65.0732
+rel. change during last iteration : -1.61808e-007
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.23733
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.00563
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = -8260.46         +/- 148.3        (1.795%)
+b               = 2.53805          +/- 0.05516      (2.173%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.995  1.000 
