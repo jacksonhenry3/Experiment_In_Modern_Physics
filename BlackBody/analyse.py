@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+sigma = 5.67*(10**(-8))
+
+def normalize(l):
+	return(l/np.max(l))
+
 def getTemp(I,V):
 	return(((V/I)/4.5398)**(1/1.203)*295)
 
@@ -22,9 +27,22 @@ def plotLogDetVinvT(dataFile,title):
 	plt.savefig(dataFile[:-4]+'png')
 	plt.close()
 
+
+
 genCalcCols('BlackBody600.data')
+plotLogDetVinvT('BlackBody600.data','600 nm')
+
 genCalcCols('BlackBody800.data')
+plotLogDetVinvT('BlackBody800.data','800 nm')
+
 genCalcCols('BlackBody1200.data')
+plotLogDetVinvT('BlackBody1200.data','1200 nm')
+
 genCalcCols('BlackBody1600.data')
+plotLogDetVinvT('BlackBody1600.data','1600 nm')
+
 genCalcCols('BlackBody2000.data')
+plotLogDetVinvT('BlackBody2000.data','2000 nm')
+
 genCalcCols('BlackBody2400.data')
+plotLogDetVinvT('BlackBody2400.data','2400 nm')
