@@ -13,16 +13,17 @@ Field2       = positiondata[:,1]
 # calculate best fit line
 v =  np.polyfit(Current,Field1,1)
 print v[0]
+
 plt.errorbar(Current,Field1,fmt = 'r.',xerr = .01, yerr = currentData[:,2]/10)
 plt.plot(Current,v[0]*Current+v[1])
 plt.title("Magnetic field VS Current at Center")
 plt.xlabel("Current (A)")
 plt.ylabel("Magnetic Field (mT)")
-<<<<<<< HEAD
+
 plt.text(2.5,0,"slope of .78 mT/A")
-=======
+
 plt.text(2.5,0,"slope of .78")
->>>>>>> origin/master
+
 plt.savefig('CurrentVField.eps')
 plt.close("all")
 

@@ -25,7 +25,7 @@ print H_wl
 n = np.arange(5,2,-1)
 coefs =  np.polyfit(1./n**2,1/H_wl,1)
 # print coefs
-print coefs[1]*4
+print coefs[1]
 print -coefs[0]
 plt.plot(1./n**2,1/H_wl,'o')
 plt.plot(1./n**2,coefs[0]*1./n**2+coefs[1])
